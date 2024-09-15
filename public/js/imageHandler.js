@@ -58,7 +58,15 @@ function processImage(src, blindnessType, severity) {
 
   const img = new Image();
   img.src = src;
+
   img.onload = function () {
+    //Match canvas size to image size
+    const ratio = img.width / img.height;
+    img.height = Math.min(800, img.height);
+    img.width = img.height * ratio;
+    canvas.height = img.height;
+    canvas.width = img.width;
+    console.log(canvas.width, canvas.height);
     //Apply filter to image
     context.drawImage(img, 0, 0, canvas.width, canvas.height);
     context2.drawImage(img, 0, 0, canvas.width, canvas.height);
