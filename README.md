@@ -18,8 +18,8 @@ This project is a Color Blindness Simulator aimed at raising awareness and promo
 
 ## Team Members 👥
 - [Isaiah White] - Back-End, Front-End
-- [Harsharandeep Dhillon] - Front-End, Magazine
+- [Harsharandeep Dhillon] - Front-End
 - [Alees Elshiek] - Front-End
-- [Mya Ramchandani](https://ww- Design
+- [Abdulrahman Muthana] - Researcher
 
 
