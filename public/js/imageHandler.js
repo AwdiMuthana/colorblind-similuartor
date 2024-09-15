@@ -50,6 +50,7 @@ function processImage(src, blindnessType, severity) {
 
   //Access the canvas element and load the image
   const canvas = document.getElementById('canvas');
+  canvas.hidden = false;
   const context = canvas.getContext('2d');
   //second canvas to store unmodified image
   const canvas2 = document.getElementById('original_image');
