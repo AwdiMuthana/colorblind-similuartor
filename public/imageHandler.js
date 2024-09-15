@@ -76,7 +76,6 @@ function processImage(src, blindnessType, severity) {
   };
 }
 
-//WIP below this
 function handleFilterChange(colorBlindnessType) {
   //Get user-input values to change the filter
   const form = document.getElementById('colorBlindnessType');
