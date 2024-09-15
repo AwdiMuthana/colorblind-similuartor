@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Blindness</title>
+  <!-- Corrected Font Awesome CDN Link -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp3c2QCXkZjIAdJkg5mVw5uh46ytFznA3Q4ZVfTz5xDHcQxLJkr3Gqp6D5ZvHPwM" crossorigin="anonymous" />
+
+  <!-- Your CSS file -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .main-tab-item {
+      cursor: pointer;
+      padding: 10px;
+      border-bottom: 2px solid transparent;
+    }
+
+    .main-tab-border {
+      border-bottom: 2px solid red;
+    }
+
+    .show {
+      display: block;
+    }
+
+    .main-tab-content-item {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header and Navigation -->
+  <header class="showcase">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar__container">
+          <!-- Logo on the far left -->
+          <a href="/" class="navbar__logo">
+            <i class="fas fa-gem"></i> Color Blindness Simulator
+          </a>
+          <!-- Mobile Menu Toggle Icon -->
+          <!-- Mobile Menu Toggle Icon -->
+  
+          <div
+            class="navbar__toggle"
+            id="mobile-menu"
+            aria-label="Toggle navigation"
+          >
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+  
+          <!-- Navigation Menu Items -->
+          <ul class="navbar__menu" id="navbar-menu">
+            <li class="navbar__item">
+              <a href="#types" class="navbar__links">Types of Color Blindness</a>
+            </li>
+            <!-- Other menu items -->
+  
+            <li class="navbar__item">
+              <a href="#test" class="navbar__links">Color Blindness Simulator</a>
+            </li>
+            <!--<li class="navbar__item">
+                <a href="#contact" class="navbar__links">Connect With Us</a>
+              </li>-->
+            <li class="navbar__item">
+              <a href="#new" class="button">Connect With Us</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <!-- Showcase Content -->
+    <div class="showcase-content">
+      <h1>Color Blindness Simulator</h1>
+      <p>Color blindness is just a different way of seeing the world, not a limitation</p>
+      <a href="#" class="btn btn-xl">
+        Simulate how people with color blindness see your media
+        <i class="fas fa-chevron-right btn-icon"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Tabs Section -->
+  <section class="main-tabs">
+    <div class="container">
+      <div id="main-tab-1" class="main-tab-item main-tab-border">
+        <i class="fas fa-eye fa-3x"></i>
+        <p class="hide-sm">Types of Color Blindness</p>
+      </div>
+      <div id="main-tab-2" class="main-tab-item">
+        <i class="fas fa-vial fa-3x"></i>
+        <p class="hide-sm">Color Blindness Simulator</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Tab Content Section -->
+  <section class="main-tab-content">
+    <div class="container">
+      <!-- Main Tab Content 1 -->
+      <div id="main-tab-1-content" class="main-tab-content-item show">
+        <!-- Types of Color Blindness Section -->
+        <section id="types">
+          <!-- Nested Tabs -->
+          <div class="nested-tabs">
+            <div class="container">
+              <div id="type-tab-1" class="type-tab-item type-tab-border">
+                <p>Red-Green Color Blindness</p>
+              </div>
+              <div id="type-tab-2" class="type-tab-item">
+                <p>Blue-Yellow Color Blindness</p>
+              </div>
+              <div id="type-tab-3" class="type-tab-item">
+                <p>Complete Color Blindness</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nested Tab Content -->
+          <div class="nested-tab-content">
+            <div id="type-tab-1-content" class="type-tab-content-item show">
+              <h2>Red-Green Color Blindness</h2>
+              <p>
+                Red-Green color blindness is the most common form of color vision deficiency. It includes:
+              </p>
+              <ul>
+                <li><strong>Protanopia:</strong> Lacking red cone cells.</li>
+                <li><strong>Protanomaly:</strong> Reduced sensitivity to red light.</li>
+                <li><strong>Deuteranopia:</strong> Lacking green cone cells.</li>
+                <li><strong>Deuteranomaly:</strong> Reduced sensitivity to green light.</li>
+              </ul>
+            </div>
+            <div id="type-tab-2-content" class="type-tab-content-item">
+              <h2>Blue-Yellow Color Blindness</h2>
+              <p>
+                Blue-Yellow color blindness is rarer and affects the ability to distinguish between blues and yellows:
+              </p>
+              <ul>
+                <li><strong>Tritanopia:</strong> Lacking blue cone cells.</li>
+                <li><strong>Tritanomaly:</strong> Reduced sensitivity to blue light.</li>
+              </ul>
+            </div>
+            <div id="type-tab-3-content" class="type-tab-content-item">
+              <h2>Complete Color Blindness</h2>
+              <p>
+                Complete color blindness, or monochromacy, is when individuals see no color at all:
+              </p>
+              <ul>
+                <li><strong>Rod Monochromacy:</strong> No functioning cone cells; vision is in shades of gray.</li>
+                <li><strong>Cone Monochromacy:</strong> Only one type of cone cell works.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Main Tab Content 2 -->
+      <div id="main-tab-2-content" class="main-tab-content-item">
+        <!-- Color Blindness Test Section -->
+        <section id="test">
+          <h1>Color Blindness Simulator</h1>
+          <p>Upload an image to test color visibility issues:</p>
+          <form id="image-upload-form" enctype="multipart/form-data">
+            <input type="file" id="image-input" name="image" accept="image/*">
+            <button type="submit" class="btn">Upload Image</button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- Connect With Us Section -->
+  <section id="contact">
+    <h1>Connect With Us</h1>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Questions? Call 1-866-579-7172</p>
+    <div class="footer-cols">
+      <ul>
+        <li><a href="#">Account</a></li>
+        <li><a href="#">Redeem Gift Cards</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Speed Test</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Include JavaScript file -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const mainTabItems = document.querySelectorAll('.main-tab-item');
+      const mainTabContentItems = document.querySelectorAll('.main-tab-content-item');
+
+      // Function to activate the correct tab and content
+      function selectMainTabItem() {
+        // Remove 'main-tab-border' from all tabs
+        mainTabItems.forEach(item => {
+          item.classList.remove('main-tab-border');
+        });
+
+        // Remove 'show' from all content items
+        mainTabContentItems.forEach(item => {
+          item.classList.remove('show');
+        });
+
+        // Add 'main-tab-border' to the clicked tab
+        this.classList.add('main-tab-border');
+
+        // Display the corresponding tab content
+        const contentId = `${this.id}-content`;
+        const contentToShow = document.getElementById(contentId);
+        if (contentToShow) {
+          contentToShow.classList.add('show');
+        }
+      }
+
+      // Attach click event listeners to the main tabs
+      mainTabItems.forEach(item => {
+        item.addEventListener('click', selectMainTabItem);
+      });
+    });
+  </script>
+</body>
+
+</html>
